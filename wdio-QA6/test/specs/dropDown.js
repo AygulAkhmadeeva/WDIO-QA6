@@ -12,7 +12,6 @@ describe('DROPDOWN LIST', () => {
         expect($("//h3").getText()).toEqual("Dropdown List");
     });
 
-
     it("select all dropdown value", function () {
         browser.url(homeUrl);
         browser.pause(2000);
@@ -40,11 +39,29 @@ describe('DROPDOWN LIST', () => {
         const received = drp.selectByIndex(0)
         expect(received).toEqual('Option 1')
         browser.pause(2000);
+
+        option[contains(text(),'Option 2')]
     });
 
     it("should select option 2 by selectByIndex", () => {
         const received = drp.selectByIndex(1)
         expect(received).toEqual('Option 2')
+        browser.pause(2000);
+    });
+
+    it("should select option 1 by selectByAttribute", () => {
+        browser.pause(2000);
+    });
+    it("should select option 2 by selectByAttribute", () => {
+        browser.pause(2000);
+    });
+
+
+
+    it("should select option 1 by selectByVisibleText", () => {
+        browser.pause(2000);
+    });
+    it("should select option 2 by selectByVisibleText", () => {
         browser.pause(2000);
     });
 });
